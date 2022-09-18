@@ -2,7 +2,7 @@
 
 The resolution will be create into version 1 from task.
 
-The ideia of the project its create each part of the API as module that can be converted into cloud functions, putin the eyes on the future for scalabe reasons.
+The ideia of the project its create each part of the API as module that can be converted into cloud functions, looking to the future for scalabe reasons.
 
 Documentation
 
