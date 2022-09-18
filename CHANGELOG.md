@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.2](https://github.com/viniciusgomes/challange-deel/compare/v0.1.1...v0.1.2) (2022-09-18)
+
+
+### Features
+
+* add clean architecture with contracts to work on. ([9107cae](https://github.com/viniciusgomes/challange-deel/commit/9107cae32df0e6e60a1480a149aa83b05821aa25))
+
+
+### Bug Fixes
+
+* resolve problems to run M1, version sqlite3 5.0.8 seems not work so i change for 5.1.1 ([2a65efd](https://github.com/viniciusgomes/challange-deel/commit/2a65efd93c284ef32f048e4235bb799c04ee31f5))
+
 ### 0.1.1 (2022-09-17)
 
 
