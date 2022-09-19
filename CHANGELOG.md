@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/viniciusgomes/challange-deel/compare/v0.1.3...v0.1.4) (2022-09-19)
+
+
+### Features
+
+* add balance api to project ([83cf5ba](https://github.com/viniciusgomes/challange-deel/commit/83cf5ba9918392ff1d5cad58d68794daac6594a2))
+
 ### [0.1.3](https://github.com/viniciusgomes/challange-deel/compare/v0.1.2...v0.1.3) (2022-09-19)
 
 
