@@ -1,6 +1,6 @@
 const oServerEmitter = require('../server/emmiter');
 
-const logErrorEvent = sLogData => console.error(sLogData)
+const logError = sLogData => console.error(sLogData)
 
 const setupLogExpressError = (errorLogger, eventName) => ({ req, error }) => errorLogger({
   params: req.params,
@@ -17,4 +17,4 @@ const setupLogExpressError = (errorLogger, eventName) => ({ req, error }) => err
   },
 });
 
-exports.logExpressError = setupLogExpressError(logErrorEvent, oServerEmitter.events.EXPRESS_ERROR);
+exports.logExpressError = setupLogExpressError(logError, oServerEmitter.events.EXPRESS_ERROR);
