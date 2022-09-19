@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/viniciusgomes/challange-deel/compare/v0.1.2...v0.1.3) (2022-09-19)
+
+
+### Features
+
+* add jobs to project ([a9eb8bb](https://github.com/viniciusgomes/challange-deel/commit/a9eb8bb9eb2fcb04c7d7ea5585ef65305515c290))
+
+
+### Bug Fixes
+
+* add correct english ([a8b9552](https://github.com/viniciusgomes/challange-deel/commit/a8b9552d34ee868b8d2731581b8a3029d47dbd55))
+
 ### [0.1.2](https://github.com/viniciusgomes/challange-deel/compare/v0.1.1...v0.1.2) (2022-09-18)
 
 
