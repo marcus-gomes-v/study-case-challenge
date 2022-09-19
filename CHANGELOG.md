@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/viniciusgomes/challange-deel/compare/v0.1.4...v0.1.5) (2022-09-19)
+
+
+### Features
+
+* add admin api to application ([badd916](https://github.com/viniciusgomes/challange-deel/commit/badd9167ce063ccbc2a693e04ddd9c0070dfb63f))
+
 ### [0.1.4](https://github.com/viniciusgomes/challange-deel/compare/v0.1.3...v0.1.4) (2022-09-19)
 
 
