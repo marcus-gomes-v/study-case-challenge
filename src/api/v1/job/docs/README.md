@@ -53,7 +53,7 @@ HTTP/1.1 200 OK
 
 Pay for a job, a client can only pay if his balance >= the amount to pay. The amount should be moved from the client's balance to the contractor balance.
 
-`GET /api/v1/jobs/:job_id/pay`
+`POST /api/v1/jobs/:job_id/pay`
 
 ### Request - 200
 
