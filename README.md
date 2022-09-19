@@ -6,7 +6,8 @@ The ideia of the project its create each part of the API as module that can be c
 
 Documentation
 
-*  [Contracts](./src/api/v1/contracts/docs/README.md)
+* [Contracts](./src/api/v1/contracts/docs/README.md)
+* [Jobs](./src/api/v1/jobs/docs/README.md)
 
 # DEEL BACKEND TASK
 
