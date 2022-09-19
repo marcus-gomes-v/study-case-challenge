@@ -1,4 +1,4 @@
-const errors = new Map([
+const eHttpError = new Map([
   ['ContractNotFound', {
     message: 'No contract has found',
     status: 404,
@@ -9,4 +9,4 @@ const errors = new Map([
   }],
 ]);
 
-module.exports = (name) => errors.get(name);
+module.exports = (name) => eHttpError.get(name);

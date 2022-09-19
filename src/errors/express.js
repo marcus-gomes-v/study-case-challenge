@@ -5,7 +5,7 @@ const appEmmiter = require('../server/emmiter');
 const { EXPRESS_ERROR } = appEmmiter.events;
 
 const expressErrorHandler = (app) => {
-  app.use((err, req, res) => {
+  app.use((err, req, res, _) => {
     appEmmiter.emit(EXPRESS_ERROR, { req, error: err });
 
     const error = handleExpressError(err);
