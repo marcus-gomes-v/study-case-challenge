@@ -1,11 +1,13 @@
-const express = require('express');
+const express = require('express')
 
-const contracts = require('./contracts');
-const jobs = require('./jobs')
+const contract = require('./contract')
+const job = require('./job')
+const balance = require('./balance')
 
-const routes = express.Router();
+const routes = express.Router()
 
-routes.use(contracts);
-routes.use(jobs);
+routes.use(contract)
+routes.use(job)
+routes.use(balance)
 
-module.exports = routes;
+module.exports = routes
