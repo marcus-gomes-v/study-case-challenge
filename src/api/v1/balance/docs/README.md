@@ -2,7 +2,7 @@
 
 The REST API for Balance is described below.
 
-## Pay for a Job
+## Deposit Money
 
 Deposits money into the the the balance of a client, a client can't deposit more than 25% his total of jobs to pay. (at the deposit moment)
 
