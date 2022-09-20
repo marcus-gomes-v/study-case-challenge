@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.6](https://github.com/viniciusgomes/challange-deel/compare/v0.1.5...v0.1.6) (2022-09-20)
+
+
+### Features
+
+* add postman collection with the response templates saved ([a0cf8cd](https://github.com/viniciusgomes/challange-deel/commit/a0cf8cd105137099569508a395f1c693c4de0ffd))
+* add tests to Jobs, Balance and Contract api ([5342847](https://github.com/viniciusgomes/challange-deel/commit/5342847c64f7e01af5a920ba9f0b8ba5bb001cf4))
+
 ### [0.1.5](https://github.com/viniciusgomes/challange-deel/compare/v0.1.4...v0.1.5) (2022-09-19)
 
 
