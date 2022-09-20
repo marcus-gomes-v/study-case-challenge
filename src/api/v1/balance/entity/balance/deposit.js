@@ -26,3 +26,7 @@ const deposit = async (req, res, next) => {
 };
 
 module.exports = deposit;
+
+module.exports.test = {
+  sendResponse
+}

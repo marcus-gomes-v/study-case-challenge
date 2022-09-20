@@ -8,7 +8,7 @@ const IN_PROGRESS_STATUS = oContractStatus.IN_PROGRESS
 
 const sumActiveJobs = async (client, Job, Contract) => {
   try{
-    const sumActiveJobs = Job.findOne({
+    const sumActiveJobs = await Job.findOne({
       attributes: [
         [Sequelize.fn('sum', Sequelize.col('price')), 'totalJobAmount'],
       ],
@@ -32,3 +32,7 @@ const sumActiveJobs = async (client, Job, Contract) => {
 }
 
 module.exports = sumActiveJobs;
+
+module.exports.test = {
+  sumActiveJobs
+}

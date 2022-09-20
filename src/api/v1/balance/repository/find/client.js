@@ -17,3 +17,7 @@ const findClient = async (ClientId, Profile) => {
 }
 
 module.exports = findClient
+
+module.exports.test = {
+  findClient
+}

@@ -4,4 +4,4 @@ const NotContractsFoundError = contractsErrors('NotContractsFound')
 
 const hasContracts = (result) => result.length > 0 ? result : throwCustomError(NotContractsFoundError)
 
-exports.hasContracts = hasContracts
+module.exports = hasContracts

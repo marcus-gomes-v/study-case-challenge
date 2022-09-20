@@ -8,8 +8,7 @@ const updateBalances = async ( client, contractor, job, Profile, Job ) => {
     const newClientBalance = client.balance - job.price
     const newContractorBalance = contractor.balance + job.price
 
-    const result = await sequelize.transaction(async (t) => {
-
+    await sequelize.transaction(async (t) => {
       await Profile.update({
         balance: newClientBalance
       }, {
@@ -36,8 +35,7 @@ const updateBalances = async ( client, contractor, job, Profile, Job ) => {
         transaction: t
       });
     });
-    
-    return result;
+    return true
   } catch (error) {
     throwCustomError(ErrorProcessingTransaction)
   }

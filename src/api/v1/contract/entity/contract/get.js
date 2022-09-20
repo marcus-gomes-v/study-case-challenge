@@ -19,3 +19,7 @@ const getContractById = async (req, res, next) => {
 };
 
 module.exports = getContractById;
+
+module.exports.test = {
+  sendResponse
+};

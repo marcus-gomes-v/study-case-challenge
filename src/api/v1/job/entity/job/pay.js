@@ -26,6 +26,10 @@ const pay = async (req, res, next) => {
   } catch (error) {
     next(error);
   }
-};
+}
 
-module.exports = pay;
+module.exports = pay
+
+module.exports.test = {
+  pay
+}

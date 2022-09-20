@@ -15,3 +15,7 @@ const updateClientBalance = async (id, amount, Profile) => {
 }
 
 module.exports = updateClientBalance
+
+module.exports.test = {
+  updateClientBalance
+}

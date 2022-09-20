@@ -18,3 +18,7 @@ const getActiveJobs = async (req, res, next) => {
 };
 
 module.exports = getActiveJobs;
+
+module.exports.test = {
+  sendResponse
+}

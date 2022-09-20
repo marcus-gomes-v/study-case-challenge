@@ -14,9 +14,13 @@
   "scripts": {
     "start": "nodemon ./src/index.js",
     "seed": "node ./scripts/seedDb.js",
+    "test": "npm run test:unit",
+    "test:unit": "export NODE_ENV=test || SET \"NODE_ENV=test\" && ava **/tests/**/*.test.js",
     "release": "standard-version"
   },
   "devDependencies": {
+    "ava": "^4.3.3",
+    "sinon": "^14.0.0",
     "concurrently": "4.1.0",
     "nodemon": "1.19.1"
   },
