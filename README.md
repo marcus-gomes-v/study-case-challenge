@@ -1,10 +1,28 @@
 # RESOLUTION DESCRIPTION
 
-The resolution will be create into version 1 from task.
+The ideia of the project its create each part of the API as module that can be converted into cloud functions, looking possibility to scalabe on the horizon.
 
-The ideia of the project its create each part of the API as module that can be converted into cloud functions, looking to the future for scalabe reasons.
+Added tests on Contract, Jobs and Balances repository and response message.
 
-Documentation
+Added postman collection to help on tests API
+
+I would like to create a frontend using react and tailwind to show some skills, but that could be a good tech talk to present for other employees from Deel.
+
+### Quick start
+
+Install
+
+```
+$ npm i
+```
+
+Tests
+
+```
+npm run test
+```
+
+### Documentation
 
 * [Contracts](./src/api/v1/contract/docs/README.md)
 * [Jobs](./src/api/v1/job/docs/README.md)
