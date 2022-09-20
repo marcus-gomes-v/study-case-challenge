@@ -1,0 +1,1702 @@
+{
+	"info": {
+		"_postman_id": "40c7a9c3-d7b2-4447-97cb-4fa2704af6aa",
+		"name": "Deel-Express-Challange",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "311189"
+	},
+	"item": [
+		{
+			"name": "Contract",
+			"item": [
+				{
+					"name": "List Contracts",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "profile_id",
+								"value": "2",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/contracts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"contracts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/contracts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"contracts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "487"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e7-8aOplOV/eTZRWrAQ9WA1bteCEFg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 14:06:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 7,\n        \"terms\": \"bla bla bla\",\n        \"status\": \"in_progress\",\n        \"createdAt\": \"2022-09-18T14:06:09.957Z\",\n        \"updatedAt\": \"2022-09-18T14:06:09.957Z\",\n        \"ContractorId\": 7,\n        \"ClientId\": 4\n    },\n    {\n        \"id\": 8,\n        \"terms\": \"bla bla bla\",\n        \"status\": \"in_progress\",\n        \"createdAt\": \"2022-09-18T14:06:09.957Z\",\n        \"updatedAt\": \"2022-09-18T14:06:09.957Z\",\n        \"ContractorId\": 6,\n        \"ClientId\": 4\n    },\n    {\n        \"id\": 9,\n        \"terms\": \"bla bla bla\",\n        \"status\": \"in_progress\",\n        \"createdAt\": \"2022-09-18T14:06:09.957Z\",\n        \"updatedAt\": \"2022-09-18T14:06:09.957Z\",\n        \"ContractorId\": 8,\n        \"ClientId\": 4\n    }\n]"
+						},
+						{
+							"name": "Response 404",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "5",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/contracts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"contracts"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "58"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3a-Le9uGB8hpb/6i6DwAkqFRVLNZBQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 14:52:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Profile has no active contracts\",\n    \"status\": 404\n}"
+						},
+						{
+							"name": "Response 412",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "12",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/contracts",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"contracts"
+									]
+								}
+							},
+							"status": "Precondition Failed",
+							"code": 412,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-wATVWlx+lbi9s2OD02E9Y8uhMbg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 14:52:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"No profile has found for the requested profile_id\",\n    \"status\": 412\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Contract By ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "profile_id",
+								"value": "5",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/contracts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"contracts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/contracts/9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"contracts",
+										"9"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "161"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a1-l28qgg45a5HpQMcV22xQwWLLkPI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 14:50:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 9,\n    \"terms\": \"bla bla bla\",\n    \"status\": \"in_progress\",\n    \"createdAt\": \"2022-09-18T14:36:49.794Z\",\n    \"updatedAt\": \"2022-09-18T14:36:49.794Z\",\n    \"ContractorId\": 8,\n    \"ClientId\": 4\n}"
+						},
+						{
+							"name": "Response 404",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "4",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/contracts/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"contracts",
+										"6"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "48"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"30-u3AlkYl95KhcjiVYBWgzTTjrdtE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 14:52:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"No contract has found\",\n    \"status\": 404\n}"
+						},
+						{
+							"name": "Response 412",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "12",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/contracts/6",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"contracts",
+										"6"
+									]
+								}
+							},
+							"status": "Precondition Failed",
+							"code": 412,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-wATVWlx+lbi9s2OD02E9Y8uhMbg\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 18 Sep 2022 14:53:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"No profile has found for the requested profile_id\",\n    \"status\": 412\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Job",
+			"item": [
+				{
+					"name": "List Unpaid Jobs",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "profile_id",
+								"value": "2",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/jobs/unpaid",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"unpaid"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "2",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/jobs/unpaid",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"jobs",
+										"unpaid"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "679"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a7-D1U3tTYqO4jvmRScHx/woLXVqxg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 00:37:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 4,\n        \"description\": \"work\",\n        \"price\": 200,\n        \"paid\": null,\n        \"paymentDate\": null,\n        \"createdAt\": \"2022-09-19T00:34:24.328Z\",\n        \"updatedAt\": \"2022-09-19T00:34:24.328Z\",\n        \"ContractId\": 4,\n        \"Contract\": {\n            \"id\": 4,\n            \"terms\": \"bla bla bla\",\n            \"status\": \"in_progress\",\n            \"createdAt\": \"2022-09-19T00:34:24.327Z\",\n            \"updatedAt\": \"2022-09-19T00:34:24.327Z\",\n            \"ContractorId\": 7,\n            \"ClientId\": 2\n        }\n    },\n    {\n        \"id\": 3,\n        \"description\": \"work\",\n        \"price\": 202,\n        \"paid\": null,\n        \"paymentDate\": null,\n        \"createdAt\": \"2022-09-19T00:34:24.328Z\",\n        \"updatedAt\": \"2022-09-19T00:34:24.328Z\",\n        \"ContractId\": 3,\n        \"Contract\": {\n            \"id\": 3,\n            \"terms\": \"bla bla bla\",\n            \"status\": \"in_progress\",\n            \"createdAt\": \"2022-09-19T00:34:24.327Z\",\n            \"updatedAt\": \"2022-09-19T00:34:24.327Z\",\n            \"ContractorId\": 6,\n            \"ClientId\": 2\n        }\n    }\n]"
+						},
+						{
+							"name": "Response 404 - No Active Jobs",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/jobs/unpaid",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"jobs",
+										"unpaid"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-POPe6pBtupKNfnmrG7bpVt9vn4Y\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 00:37:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Not active jobs\",\n    \"status\": 404\n}"
+						},
+						{
+							"name": "Response 412 - No Profile Found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "12",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/jobs/unpaid",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"jobs",
+										"unpaid"
+									]
+								}
+							},
+							"status": "Precondition Failed",
+							"code": 412,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-wATVWlx+lbi9s2OD02E9Y8uhMbg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 00:38:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"No profile has found for the requested profile_id\",\n    \"status\": 412\n}"
+						}
+					]
+				},
+				{
+					"name": "Pay Job",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "profile_id",
+								"value": "2",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/jobs/4/pay",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"jobs",
+								"4",
+								"pay"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response 200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "2",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/jobs/3/pay",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"jobs",
+										"3",
+										"pay"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-EJEmCIOMTnMGQwfudlmY3RNejoA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 00:44:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Payment for job 3 was successfully completed, Amount: $202.00\"\n}"
+						},
+						{
+							"name": "Response 404 - Job not exists",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "2",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/jobs/5/pay",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"jobs",
+										"5",
+										"pay"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "45"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2d-HhW06Zi7s5eVw709RyCjq3g4A6o\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 01:16:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Job does not exist\",\n    \"status\": 404\n}"
+						},
+						{
+							"name": "Response 412 - Profile not Found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "12",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/jobs/4/pay",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"jobs",
+										"4",
+										"pay"
+									]
+								}
+							},
+							"status": "Precondition Failed",
+							"code": 412,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-wATVWlx+lbi9s2OD02E9Y8uhMbg\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 01:19:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"No profile has found for the requested profile_id\",\n    \"status\": 412\n}"
+						},
+						{
+							"name": "Response 422 - Job already paid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "2",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/jobs/3/pay",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"jobs",
+										"3",
+										"pay"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32-FqyjVvlvZjgVBQhRnNDGyioiqn4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 01:17:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Job was previously paid\",\n    \"status\": 422\n}"
+						},
+						{
+							"name": "Response 422 - Insufficient founds",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "2",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/jobs/4/pay",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"jobs",
+										"4",
+										"pay"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "69"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"45-xBkl/SnPicGvglG25Uxo3eGgedE\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 01:16:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Insufficient founds to process the payment\",\n    \"status\": 422\n}"
+						},
+						{
+							"name": "Response 422 - Unexpected Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "1",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/jobs/2/pay",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"jobs",
+										"2",
+										"pay"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "66"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"42-6yz86dXyjqP6p2xitIfTcVdhBbI\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 01:19:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unexpected error during payment process\",\n    \"status\": 422\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Balance",
+			"item": [
+				{
+					"name": "Make a Deposit",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "profile_id",
+								"value": "2",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \n    \"amount\": 50\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3001/api/v1/balances/deposit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"balances",
+								"deposit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response 200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "2",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n    \"amount\": 50\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/v1/balances/deposit/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"balances",
+										"deposit",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "34"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"22-glbCtWmdLRx5gXo54379o6gSwCk\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 19:26:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"The deposit was made\"\n}"
+						},
+						{
+							"name": "Response 412 - Profile not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "5",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n    \"amount\": 50\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/v1/balances/deposit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"balances",
+										"deposit"
+									]
+								}
+							},
+							"status": "Precondition Failed",
+							"code": 412,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"43-hS2JkI9YW3Glxv7tWtPnrzNVDBY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 19:35:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"No client has found for the requested ID\",\n    \"status\": 412\n}"
+						},
+						{
+							"name": "Response 422 - Maximum amount higher",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "2",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \n    \"amount\": 150\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3001/api/v1/balances/deposit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"balances",
+										"deposit"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "60"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3c-Vobn38vT4IrnFLFqtkkWymjvygA\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 19:36:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Maximum amount to deposit: $50.00\",\n    \"status\": 422\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Best Profession",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "profile_id",
+								"value": "2",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/admin/best-profession?start=2020-06-10&end=2020-08-14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"best-profession"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "2020-06-10"
+								},
+								{
+									"key": "end",
+									"value": "2020-08-14"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "2",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/admin/best-profession?start=2020-06-10&end=2020-08-14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"best-profession"
+									],
+									"query": [
+										{
+											"key": "start",
+											"value": "2020-06-10"
+										},
+										{
+											"key": "end",
+											"value": "2020-08-14"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "36"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"24-EIHvw6MLDsJWGDzLry9zlpmApOE\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 21:18:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"profession\": \"Musician\",\n    \"total\": 21\n}"
+						},
+						{
+							"name": "Response 400",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "2",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/admin/best-profession?start=2020-06&end=2020--17",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"best-profession"
+									],
+									"query": [
+										{
+											"key": "start",
+											"value": "2020-06"
+										},
+										{
+											"key": "end",
+											"value": "2020--17"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "196"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c4-k6v3ADk3bE+lJ0c2fOvCjIlSoKI\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 21:13:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Validation error\",\n    \"name\": \"ValidationError\",\n    \"status\": 400,\n    \"code\": \"validation_error\",\n    \"error\": [\n        {\n            \"param\": \"end\",\n            \"msg\": \"The end param must be a valid date: {YYYY-MM-DD}\",\n            \"value\": \"2020--17\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Best Client",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "profile_id",
+								"value": "2",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3001/api/v1/admin/best-clients?start=2020-06-10&end=2020-08-14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3001",
+							"path": [
+								"api",
+								"v1",
+								"admin",
+								"best-clients"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "2020-06-10"
+								},
+								{
+									"key": "end",
+									"value": "2020-08-14"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Response 200",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "2",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/admin/best-clients?start=2020-06-10&end=2020-08-14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"best-clients"
+									],
+									"query": [
+										{
+											"key": "start",
+											"value": "2020-06-10"
+										},
+										{
+											"key": "end",
+											"value": "2020-08-14"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "46"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2e-mszggTt5G7oee8Yy2m6Utxq9JcY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 21:18:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"fullName\": \"Harry Potter\",\n        \"paid\": 21\n    }\n]"
+						},
+						{
+							"name": "Response 400",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "profile_id",
+										"value": "2",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3001/api/v1/admin/best-clients?start=2020-06-10&end=2020--14",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3001",
+									"path": [
+										"api",
+										"v1",
+										"admin",
+										"best-clients"
+									],
+									"query": [
+										{
+											"key": "start",
+											"value": "2020-06-10"
+										},
+										{
+											"key": "end",
+											"value": "2020--14"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "196"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c4-/YGy1eI+F1Oem720S50xuJxDsB4\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 19 Sep 2022 21:18:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Validation error\",\n    \"name\": \"ValidationError\",\n    \"status\": 400,\n    \"code\": \"validation_error\",\n    \"error\": [\n        {\n            \"param\": \"end\",\n            \"msg\": \"The end param must be a valid date: {YYYY-MM-DD}\",\n            \"value\": \"2020--14\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
