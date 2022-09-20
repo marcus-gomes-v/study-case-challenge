@@ -8,6 +8,8 @@ Added postman collection to help on tests API
 
 I would like to create a frontend using react and tailwind to show some skills, but that could be a good tech talk to present for other employees from Deel.
 
+I use conventional commits to create good [CHANGELOG](CHANGELOG.md)
+
 ### Quick start
 
 Install
