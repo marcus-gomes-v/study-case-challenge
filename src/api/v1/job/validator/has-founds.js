@@ -2,10 +2,6 @@ const { throwCustomError } = require('../../../../errors');
 const jobsErrors = require('../error');
 const NoSufficientFundsError = jobsErrors('NoSufficientFunds');
 
-const hasFounds = (profile, job) => {
-    profile.balance >= job.price ? 
-        profile.balance : 
-        throwCustomError(NoSufficientFundsError)
-};
+const hasFounds = (profile, job) => profile.balance < job.price ? throwCustomError(NoSufficientFundsError) : true
 
-exports.hasFounds = hasFounds;
+module.exports = hasFounds;

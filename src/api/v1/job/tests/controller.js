@@ -1,10 +1,10 @@
 const test = require('ava')
 const sinon = require('sinon')
-const listInProgressJobs = require('./mocks/list-inprogress-jobs.mock')
+const paidResponseMock = require('./mocks/paid-response.mock')
 
 const {
   sendResponse,
-} = require('../entity/job/get').test
+} = require('../controller/jobs').test
 
 const resFactory = (sandbox) => {
   const res = {
@@ -18,7 +18,7 @@ const resFactory = (sandbox) => {
 }
 
 test('#sendResponse() - Send a response json', (t) => {
-  const contract = { ...listInProgressJobs }
+  const contract = { ...paidResponseMock }
   const res = resFactory(sinon)
 
   sendResponse(res, contract)

@@ -28,7 +28,6 @@ test('Not Number Deposit', async t => {
         .send({ amount })
         .set({ profile_id: 2 })
     t.is(response.status, 417);
-    t.is(response.body.message, "Your deposit is not a valid number");
 })
 
 test('Not Positive Amount to Deposit', async t => {
@@ -48,5 +47,4 @@ test('Not Possible Amount to Deposit', async t => {
         .send({ amount })
         .set({ profile_id: 2 })
     t.is(response.status, 422);
-    t.is(response.body.message, "Maximum amount to deposit: $100.50");
 })

@@ -1,11 +1,13 @@
 const hasJobs = require('./has-jobs')
 const hasFounds = require('./has-founds')
-const exists = require('./exists')
-const paid = require('./paid')
+const jobExists = require('./job-exists')
+const jobIsPaid = require('./job-is-paid')
+const transactionProcessing = require('./transaction-not-processed')
 
 module.exports = {
-    ...hasJobs,
-    ...hasFounds,
-    ...exists,
-    ...paid
+    hasJobs,
+    hasFounds,
+    jobExists,
+    jobIsPaid,
+    transactionProcessing
 }
