@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/viniciusgomes/challange-deel/compare/v0.1.6...v0.1.7) (2022-09-23)
+
+
+### Features
+
+* add transaction to deposit also setup some tests for api request ([297d3ee](https://github.com/viniciusgomes/challange-deel/commit/297d3eeff1fef6495b9f48cfc6d637e6c5949398))
+* implement best tests at job also better implementation of transaction ([9d02870](https://github.com/viniciusgomes/challange-deel/commit/9d028709f98cc51f381a9e716ce997e8e1d5ed47))
+* implement tests for api requests also set sendResponse to controller responsability ([ccb3ea2](https://github.com/viniciusgomes/challange-deel/commit/ccb3ea29180625280704a66b73f45ddf2a81fe73))
+* set the corect responsability for controller removing response from entity also set api tests ([0cd7795](https://github.com/viniciusgomes/challange-deel/commit/0cd7795479a77b7f0e7ad69498adc89899a15ede))
+* set the responsability to sendResponse to controller and remove from entity ([c84ddea](https://github.com/viniciusgomes/challange-deel/commit/c84ddeab90f0127ab8388edadf7c0788bfca04ea))
+
+
+### Bug Fixes
+
+* set correct name for tests ([41a3cf4](https://github.com/viniciusgomes/challange-deel/commit/41a3cf4ececdc9139c79e24302a99b7c9fdebfb4))
+* trying to deposit in the clinet that dosent exists ([e2afeae](https://github.com/viniciusgomes/challange-deel/commit/e2afeae8b70e7af42ee6f33f2b0101028e1a33d6))
+
 ### [0.1.6](https://github.com/viniciusgomes/challange-deel/compare/v0.1.5...v0.1.6) (2022-09-20)
 
 
