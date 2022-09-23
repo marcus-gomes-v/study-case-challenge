@@ -1,10 +1,10 @@
 const { Op } = require('sequelize');
-const { oContractStatus } = require('../../../../shared')
-const IN_PROGRESS_STATUS = oContractStatus.IN_PROGRESS;
+const { oContractStatus } = require('../../../../../shared')
+const IN_PROGRESS_STATUS = oContractStatus.IN_PROGRESS
 
-const listJobs = async (profile, Job, Contract) => {
+const listInProgressJobs = async (profile, Job, Contract) => {
   try{
-    const jobsInProgress = await Job.findAll({
+    const listOfInProgressJobs = await Job.findAll({
       where: {
         paid: {
           [Op.is]: null,
@@ -23,18 +23,16 @@ const listJobs = async (profile, Job, Contract) => {
       order: [
         ['ContractId', 'DESC'],
       ],
-    });
+    })
 
-    return jobsInProgress
+    return listOfInProgressJobs
   } catch(error){
     throw(error)
   }
 }
 
-module.exports = {
-  listJobs
-};
+module.exports = listInProgressJobs
 
 module.exports.test = {
-  listJobs
+  listInProgressJobs
 }

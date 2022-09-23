@@ -14,8 +14,9 @@
   "scripts": {
     "start": "nodemon ./src/index.js",
     "seed": "node ./scripts/seedDb.js",
+    "pretest": "node ./scripts/seedTestDb.js",
     "test": "npm run test:unit",
-    "test:unit": "export NODE_ENV=test || SET \"NODE_ENV=test\" && npm run seed && ava **/tests/**/*.test.js",
+    "test:unit": "export NODE_ENV=test || SET \"NODE_ENV=test\" && ava **/tests/**/*.test.js",
     "release": "standard-version"
   },
   "devDependencies": {

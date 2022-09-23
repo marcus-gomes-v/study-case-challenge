@@ -1,7 +1,7 @@
-const pay = require('./pay')
+const payActiveJob = require('./pay-active-job')
 const listActiveJobs = require('./list-active-jobs')
 
 module.exports = {
-    pay,
+    payActiveJob,
     listActiveJobs
 }

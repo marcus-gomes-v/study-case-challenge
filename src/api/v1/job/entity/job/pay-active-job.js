@@ -2,12 +2,12 @@
 const { findJob, updateJob, incrementProfileBalance, decreaseProfileBalance } = require('../../repository')
 const { hasFounds } = require('../../validator')
 
-const pay = async (sequelize, profile, params, { Profile, Job, Contract }) => {
+const payActiveJob = async (sequelize, profile, params, { Profile, Job, Contract }) => {
 
   const job = await findJob(profile, params, Job, Contract)
   hasFounds(profile, job)
 
-  const transaction = await sequelize.transaction() 
+  const transaction = await sequelize.transaction()
   await Promise.all([
     updateJob(job, transaction, Job),
     incrementProfileBalance(job, transaction, Profile),
@@ -19,4 +19,4 @@ const pay = async (sequelize, profile, params, { Profile, Job, Contract }) => {
   return { message: `Payment for job ${id} was successfully completed, Amount: ${(+price).toLocaleString("en-US", { style: "currency", currency: "USD" })}` }
 }
 
-module.exports = pay
+module.exports = payActiveJob

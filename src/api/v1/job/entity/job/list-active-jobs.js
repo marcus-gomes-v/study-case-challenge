@@ -1,10 +1,10 @@
-const { listJobs } = require("../../repository");
+const { listInProgressJobs } = require("../../repository");
 const { hasJobs } = require("../../validator");
 
-const listActiveJobs = async (profile, Job, Contract) => {
-  const result = await listJobs(profile, Job, Contract)
-  const activeJobs = hasJobs(result)
-  return activeJobs
+const listActiveJobs = async (profile, { Job, Contract }) => {
+  const listOfInProgressJobs = await listInProgressJobs(profile, Job, Contract)
+  const listOfActiveJobs = hasJobs(listOfInProgressJobs)
+  return listOfActiveJobs
 }
 
 module.exports = listActiveJobs

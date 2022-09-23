@@ -1,7 +1,7 @@
 const express = require('express');
 
 const getProfile = require('../../../../middleware/get-profile');
-const { pay, listActiveJobs } = require('../entity/job');
+const { payActiveJob, listActiveJobs } = require('../entity/job');
 
 const jobs = express.Router();
 
@@ -13,8 +13,8 @@ jobs
   .get('/jobs/unpaid', getProfile, async (req, res, next) => {
     try {
       const { profile } = req
-      const { Job, Contract } = getModels(req)
-      const response = await listActiveJobs(profile, Job, Contract)
+      const models = getModels(req)
+      const response = await listActiveJobs(profile, models)
       sendResponse(res, response)
     } catch (error) {
       next(error)
@@ -25,7 +25,7 @@ jobs
       const sequelize = req.app.get('sequelize')
       const { profile, params } = req
       const models = getModels(req)
-      const response = await pay(sequelize, profile, params, models)
+      const response = await payActiveJob(sequelize, profile, params, models)
       sendResponse(res, response);
     } catch (error) {
       next(error);

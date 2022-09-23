@@ -5,14 +5,14 @@ const jobMock = require('./mocks/job.mock')
 
 const {
   findJob,
-} = require('../repository/find/job').test
+} = require('../repository/find/find-job').test
 
 test('#findJob() - Success retrieve a list of contract data', async (t) => {
   const findOneStub = sinon.stub().returns(jobMock)
   const Contract = {
     findOne: findOneStub,
   }
-  
+
   const Job = {
     findOne: findOneStub,
   }
