@@ -4,7 +4,7 @@ const depositMock = require('./mocks/deposit.mock')
 
 const {
   sendResponse,
-} = require('../entity/balance/deposit').test
+} = require('../controller/balances').test
 
 const resFactory = (sandbox) => {
   const res = {
