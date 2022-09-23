@@ -1,16 +1,17 @@
 const balanceErrors = require('../../error')
-const ErrorInvalidAmount = balanceErrors('InvalidAmount')
+const ErrorProblemToProcess = balanceErrors('ProblemToProcess')
 const { throwCustomError } = require("../../../../../errors");
 
-const updateClientBalance = async (id, amount, Profile) => {
+const updateClientBalance = async (id, amount, Profile, transaction) => {
   try{
     const result = await Profile.increment(
       { balance: amount },
-      { where: { id: id } }
+      { where: { id: id } },
+      { transaction }
     )
     return result
   } catch(error){
-    throwCustomError(ErrorInvalidAmount)
+    throwCustomError(ErrorProblemToProcess)
   }
 }
 

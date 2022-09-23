@@ -11,6 +11,15 @@ const eHttpError = new Map([
     message: 'The expect calculation could not be performed',
     status: 417,
   }],
+  ['DepositIsNotValid', {
+    message: 'Your deposit is not a valid number',
+    status: 417,
+  }],
+  ['DepositIsPositive', {
+    message: 'Your deposit must be a positive amount',
+    status: 417,
+  }],
+  
 ]);
 
 module.exports = (name) => eHttpError.get(name);

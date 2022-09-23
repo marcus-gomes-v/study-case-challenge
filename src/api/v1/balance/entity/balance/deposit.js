@@ -1,5 +1,5 @@
 
-const { canDeposit, clientExists } = require('../../validator');
+const { depositIsANumber, isPositive } = require('../../validator');
 const { updateClientBalance, sumActiveJobs, findClient } = require("../../repository");
 
 const getModels = (req) => req.app.get('models');
@@ -12,20 +12,24 @@ const deposit = async (req, res, next) => {
     const { amount } = req.body
     const { Profile, Job, Contract } = getModels(req)
 
-    const client = await findClient(profile.id, Profile);
-    clientExists(client);
-    const { dataValues: { totalJobAmount } } = await sumActiveJobs(client, Job, Contract);
+    depositIsANumber(amount) && isPositive(amount)
 
-    canDeposit(totalJobAmount, amount);
-    await updateClientBalance(client.id, amount, Profile);
+    const sequelize = req.app.get('sequelize')
+    const transaction = await sequelize.transaction() 
+    await Promise.all([
+      findClient(profile.id, Profile, transaction),
+      sumActiveJobs(amount, profile.id, Job, Contract, transaction),
+      updateClientBalance(profile.id, amount, Profile, transaction),
+    ])
+    await transaction.commit()
 
-    sendResponse(res);
+    sendResponse(res)
   } catch (error) {
-    next(error);
+    next(error)
   }
 };
 
-module.exports = deposit;
+module.exports = deposit
 
 module.exports.test = {
   sendResponse

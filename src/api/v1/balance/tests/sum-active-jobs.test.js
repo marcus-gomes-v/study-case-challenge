@@ -21,7 +21,9 @@ test('#sumActiveJobs() - Success retrieve a client data', async (t) => {
     id: 2
   }
 
-  const actual = await sumActiveJobs(client, Job, Contract);
+  const amount = 100
+
+  const actual = await sumActiveJobs(amount, client.id, Job, Contract);
   const actualOptions = findOneStub.getCall(0).args[0];
   const expectedOptions = {
       attributes: [
@@ -41,5 +43,5 @@ test('#sumActiveJobs() - Success retrieve a client data', async (t) => {
       }],
   }
   t.deepEqual(actualOptions, expectedOptions, 'Should call sumActiveJobs with expected options')
-  t.deepEqual(actual, sumActiveJobsMock, 'Should return a summed jobs object')
+  t.deepEqual(actual, sumActiveJobsMock.dataValues.totalJobAmount, 'Should return a summed jobs object')
 })

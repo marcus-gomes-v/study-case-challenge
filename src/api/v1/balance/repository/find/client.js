@@ -1,18 +1,20 @@
-const balanceErrors = require('../../error')
-const ErrorClientNotFound = balanceErrors('ClientNotFound')
 const { throwCustomError } = require("../../../../../errors");
+const { clientExists } = require('../../validator');
 
-const findClient = async (ClientId, Profile) => {
+const findClient = async (ClientId, Profile, transaction) => {
   try{
     const client = await Profile.findOne({
-      where: {
-        id: ClientId,
-        type: 'client',
+        where: {
+          id: ClientId,
+          type: 'client',
+        },
       },
-    });
+      { transaction }
+    );
+    clientExists(client)
     return client;
   }  catch(error){
-    throwCustomError(ErrorClientNotFound)
+    throwCustomError(error)
   }
 }
 
