@@ -16,9 +16,9 @@ test('Not Client Found to Deposit', async t => {
     const response = await request(app)
         .post('/api/v1/balances/deposit')
         .send({ amount })
-        .set({ profile_id: 5 })
+        .set({ profile_id: 12 })
     t.is(response.status, 412);
-    t.is(response.body.message, "No client has found for the requested ID");
+    t.is(response.body.message, "No profile has found for the requested profile_id");
 })
 
 test('Not Number Deposit', async t => {
