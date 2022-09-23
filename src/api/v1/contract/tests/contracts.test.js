@@ -4,7 +4,7 @@ const contractMock = require('./mocks/contract.mock')
 
 const {
   sendResponse,
-} = require('../entity/contract/get').test
+} = require('../controller/contracts').test
 
 const resFactory = (sandbox) => {
   const res = {

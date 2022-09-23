@@ -6,4 +6,4 @@ const contractExists = (result) => (
   !result ? throwCustomError(contractNotFoundError) : result
 );
 
-exports.contractExists = contractExists;
+module.exports = contractExists;

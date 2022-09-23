@@ -17,7 +17,7 @@ const findContract = async (params, profile, Contract) => {
   }
 
 }
-exports.findContract = findContract;
+module.exports = findContract;
 
 module.exports.test = {
   findContract
