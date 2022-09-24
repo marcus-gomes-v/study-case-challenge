@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/viniciusgomes/challange-deel/compare/v0.1.7...v0.1.8) (2022-09-24)
+
+
+### Bug Fixes
+
+* flows of function calls and names on Jobs ([846cbbc](https://github.com/viniciusgomes/challange-deel/commit/846cbbc24cf9c290c0ae3713295088c2b7519d86))
+* set correct name for flow in ADmin API ([6199bdc](https://github.com/viniciusgomes/challange-deel/commit/6199bdce298874ee69083be5adab1e6684f46a03))
+* set correct name for flow in Balance API ([477c600](https://github.com/viniciusgomes/challange-deel/commit/477c600152e6b4a8d634a327e670f9971edc1ea7))
+* set correct name for flow in Contract API ([8ddce7e](https://github.com/viniciusgomes/challange-deel/commit/8ddce7e2f9e808330b0a72cb322f64289d2e8e99))
+* set correct name for flow in Job API ([657f223](https://github.com/viniciusgomes/challange-deel/commit/657f22343b5f67d0806934e622be08ca4da39ce5))
+
 ### [0.1.7](https://github.com/viniciusgomes/challange-deel/compare/v0.1.6...v0.1.7) (2022-09-23)
 
 
