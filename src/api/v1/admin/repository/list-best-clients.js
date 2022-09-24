@@ -19,9 +19,9 @@ const getRawQuery = (startDate, endDate, limit) => (
   LIMIT ${limit};
   )`
 );
-const listBestClients = (startDate, endDate, limit) => {
+const listBestClientsActive = (startDate, endDate, limit) => {
   limit = getLimit(limit);
   const query = getRawQuery(startDate, endDate, limit);
   return sequelize.query(query);
 };
-module.exports = listBestClients;
+module.exports = listBestClientsActive;

@@ -18,8 +18,8 @@ const getRawQuery = (startDate, endDate) => (
     GROUP BY profile.profession
   )`
 );
-const getBestProfession = (startDate, endDate) => {
+const getBestProfessionActive = (startDate, endDate) => {
   const query = getRawQuery(startDate, endDate);
   return sequelize.query(query);
 };
-module.exports = getBestProfession;
+module.exports = getBestProfessionActive;

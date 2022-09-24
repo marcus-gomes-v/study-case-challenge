@@ -1,7 +1,7 @@
-const listBestClientsRepo = require('./list-best-clients')
-const getBestProfessionRepo = require('./get-best-profession')
+const listBestClientsActive = require('./list-best-clients')
+const getBestProfessionActive = require('./get-best-profession')
 
 module.exports = {
-    listBestClientsRepo,
-    getBestProfessionRepo
+    listBestClientsActive,
+    getBestProfessionActive
 }
