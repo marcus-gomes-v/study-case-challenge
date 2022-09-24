@@ -3,15 +3,15 @@ const transactionProcessing = require("../../validator/transaction-not-processed
 
 const incrementProfileBalance = async (job, transaction, Profile) => {
    try{
-       const incrementedBalance = await Profile.increment(
-        'balance', 
-        { 
-            by: job.price, 
-            where: { id: job.Contract.ContractorId }, 
-            transaction 
+       const incrementedProfileBalance = await Profile.increment(
+        'balance',
+        {
+            by: job.price,
+            where: { id: job.Contract.ContractorId },
+            transaction
         })
-       transactionProcessing(incrementedBalance)
-       return incrementedBalance
+       transactionProcessing(incrementedProfileBalance)
+       return incrementedProfileBalance
    } catch(error){
     throwCustomError(error)
    }

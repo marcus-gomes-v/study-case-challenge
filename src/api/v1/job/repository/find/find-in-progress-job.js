@@ -3,9 +3,9 @@ const { oContractStatus } = require('../../../../../shared')
 const { jobExists, jobIsPaid } = require('../../validator')
 const IN_PROGRESS_STATUS = oContractStatus.IN_PROGRESS
 
-const findJob = async (profile, params, Job, Contract) => {
+const findInProgressJob = async (profile, params, Job, Contract) => {
     try{
-        const job = await Job.findOne(
+        const inProgressJob = await Job.findOne(
             {
                 where: {
                     id: params.job_id,
@@ -19,15 +19,15 @@ const findJob = async (profile, params, Job, Contract) => {
                 }],
             }
         );
-        jobExists(job) && jobIsPaid(job)
-        return job
+        jobExists(inProgressJob) && jobIsPaid(inProgressJob)
+        return inProgressJob
     } catch(error){
         throwCustomError(error)
     }
 }
 
-module.exports = findJob
+module.exports = findInProgressJob
 
 module.exports.test = {
-    findJob
+    findInProgressJob
 }

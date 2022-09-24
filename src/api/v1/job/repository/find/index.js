@@ -1,5 +1,5 @@
-const findJob = require('./find-job')
+const findInProgressJob = require('./find-in-progress-job')
 
 module.exports = {
-    findJob
+    findInProgressJob
 }
