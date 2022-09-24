@@ -4,7 +4,7 @@ const clientMock = require('./mocks/client.mock')
 
 const {
   findClient,
-} = require('../repository/find/client').test
+} = require('../repository/find/find-client').test
 
 
 test('#findClient() - Success retrieve a client data', async (t) => {

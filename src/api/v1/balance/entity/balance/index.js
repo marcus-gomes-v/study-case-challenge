@@ -1,5 +1,5 @@
-const deposit = require('./deposit');
+const makeDeposit = require('./make-deposit');
 
 module.exports = {
-  deposit
+  makeDeposit
 };

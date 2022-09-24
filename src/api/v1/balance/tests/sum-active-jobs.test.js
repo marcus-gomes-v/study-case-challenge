@@ -5,7 +5,7 @@ const sumActiveJobsMock = require('./mocks/sum-active-jobs.mock')
 
 const {
   sumActiveJobs,
-} = require('../repository/find/sum-active-jobs').test
+} = require('../repository/sum/sum-active-jobs').test
 
 
 test('#sumActiveJobs() - Success retrieve a client data', async (t) => {

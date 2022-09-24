@@ -1,11 +1,9 @@
-
-const { throwCustomError } = require('../../../../../errors');
 const { depositIsANumber, isPositive } = require('../../validator');
 const { updateClientBalance, sumActiveJobs, findClient } = require("../../repository");
 
-const deposit = async (sequelize, profile, amount, { Profile, Job, Contract }) => {
+const makeDeposit = async (sequelize, profile, amount, { Profile, Job, Contract }) => {
   depositIsANumber(amount) && isPositive(amount)
-  const transaction = await sequelize.transaction() 
+  const transaction = await sequelize.transaction()
   await Promise.all([
     findClient(profile.id, Profile, transaction),
     sumActiveJobs(amount, profile.id, Job, Contract, transaction),
@@ -14,4 +12,4 @@ const deposit = async (sequelize, profile, amount, { Profile, Job, Contract }) =
   await transaction.commit()
 };
 
-module.exports = deposit
+module.exports = makeDeposit

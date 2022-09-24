@@ -4,7 +4,7 @@ const updatedClientBalanceMock = require('./mocks/updated-client-balance.mock')
 
 const {
   updateClientBalance,
-} = require('../repository/update/client-balance').test
+} = require('../repository/update/update-client-balance').test
 
 
 test('#updateClientBalance() - Success retrieve a client data', async (t) => {

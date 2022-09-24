@@ -1,7 +1,5 @@
-const sumActiveJobs = require('./sum-active-jobs')
-const findClient = require('./client')
+const findClient = require('./find-client')
 
 module.exports = {
-    sumActiveJobs,
     findClient
 }

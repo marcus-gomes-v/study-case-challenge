@@ -4,12 +4,12 @@ const { throwCustomError } = require("../../../../../errors");
 
 const updateClientBalance = async (id, amount, Profile, transaction) => {
   try{
-    const result = await Profile.increment(
+    const updatedClientBalance = await Profile.increment(
       { balance: amount },
       { where: { id: id } },
       { transaction }
     )
-    return result
+    return updatedClientBalance
   } catch(error){
     throwCustomError(ErrorProblemToProcess)
   }

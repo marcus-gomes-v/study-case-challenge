@@ -1,4 +1,4 @@
-const updateClientBalance = require('./client-balance')
+const updateClientBalance = require('./update-client-balance')
 
 module.exports = {
     updateClientBalance
