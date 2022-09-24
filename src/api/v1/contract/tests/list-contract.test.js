@@ -5,10 +5,10 @@ const { oContractStatus } = require('../../../../shared')
 const listContractMock = require('./mocks/list-contract.mock')
 
 const {
-  listContracts,
-} = require('../repository/list-contracts').test
+  listInProgressContracts,
+} = require('../repository/list/list-in-progress-contracts').test
 
-test('#listContracts() - Success retrieve a list of contract data', async (t) => {
+test('#listInProgressContracts() - Success retrieve a list of contract data', async (t) => {
   const findAllStub = sinon.stub().returns(listContractMock)
   const Contract = {
     findAll: findAllStub,
@@ -16,7 +16,7 @@ test('#listContracts() - Success retrieve a list of contract data', async (t) =>
   const profile = {
     id: 4,
   }
-  const actual = await listContracts(profile, Contract)
+  const actual = await listInProgressContracts(profile, Contract)
   const actualOptions = findAllStub.getCall(0).args[0]
   const expectedOptions = {
     where: {
@@ -27,6 +27,6 @@ test('#listContracts() - Success retrieve a list of contract data', async (t) =>
       ],
     },
   }
-  t.deepEqual(actualOptions, expectedOptions, 'Should call listContracts with expected options')
+  t.deepEqual(actualOptions, expectedOptions, 'Should call listInProgressContracts with expected options')
   t.deepEqual(actual, listContractMock, 'Should return a contract object')
 })

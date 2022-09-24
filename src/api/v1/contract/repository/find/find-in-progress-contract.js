@@ -1,8 +1,8 @@
 const { Op } = require('sequelize');
 
-const findContract = async (params, profile, Contract) => {
+const findInProgressContract = async (params, profile, Contract) => {
   try{
-    const contract = await Contract.findOne({
+    const inProgressContract = await Contract.findOne({
       where: {
         id: params.id,
         [Op.or]: [
@@ -11,14 +11,14 @@ const findContract = async (params, profile, Contract) => {
         ],
       },
     });
-    return contract
+    return inProgressContract
   } catch(error){
     throw(error)
   }
 
 }
-module.exports = findContract;
+module.exports = findInProgressContract;
 
 module.exports.test = {
-  findContract
+  findInProgressContract
 };

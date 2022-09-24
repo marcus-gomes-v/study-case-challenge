@@ -4,11 +4,11 @@ const { Op } = require('sequelize')
 const contractMock = require('./mocks/contract.mock')
 
 const {
-  findContract,
-} = require('../repository/find-contract').test
+  findInProgressContract,
+} = require('../repository/find/find-in-progress-contract').test
 
 
-test('#findContract() - Success retrieve a contract data', async (t) => {
+test('#findInProgressContract() - Success retrieve a contract data', async (t) => {
   const findOneStub = sinon.stub().returns(contractMock);
   const Contract = {
     findOne: findOneStub,
@@ -17,12 +17,12 @@ test('#findContract() - Success retrieve a contract data', async (t) => {
   const params = {
     id: 7,
   }
-  
+
   const profile = {
     id: 2,
   }
 
-  const actual = await findContract(params, profile, Contract);
+  const actual = await findInProgressContract(params, profile, Contract);
   const actualOptions = findOneStub.getCall(0).args[0];
   const expectedOptions = {
     where: {
@@ -33,6 +33,6 @@ test('#findContract() - Success retrieve a contract data', async (t) => {
       ],
     },
   }
-  t.deepEqual(actualOptions, expectedOptions, 'Should call findContract with expected options')
+  t.deepEqual(actualOptions, expectedOptions, 'Should call findInProgressContract with expected options')
   t.deepEqual(actual, contractMock, 'Should return a contract object')
 })

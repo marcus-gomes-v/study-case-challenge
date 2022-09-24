@@ -1,7 +1,7 @@
-const findContract = require('./find-contract');
-const listContracts = require('./list-contracts');
+const find = require('./find');
+const list = require('./list');
 
 module.exports = {
-    findContract,
-    listContracts
+    ...find,
+    ...list
 }

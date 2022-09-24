@@ -1,7 +1,7 @@
-const get = require('./get')
-const list = require('./list')
+const getActiveContract = require('./get-active-contract')
+const listActiveContracts = require('./list-active-contracts')
 
 module.exports = {
-    get,
-    list
+    getActiveContract,
+    listActiveContracts
 }
